@@ -63,8 +63,7 @@ This graph shows the difference in alcohol the is no difference in the the middl
 # Conclution and Discussion
 
 From box plot it appears that students who sit in the back row tend to drink more. From the inferential graph shows hat mean that all the students in the same ow do not consume the same amount on alcohol.From the tukey graph shows there is no difference in the the middle to the front seat consumption and those in the back drink more than the middle and front row. 
-# 
-  
+
   
 ```{r include=FALSE}
 require(tidyverse)
