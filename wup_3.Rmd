@@ -1,5 +1,5 @@
 ---
-title: "Alcohol vs Seat choice"
+title: "W_UP_03 Alcohol vs Seat choice"
 author: "ediaz16"
 date: "Spring 2024"
 output: html_document
@@ -7,8 +7,39 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library (tigerstats)
+library (tidyverse)
+data (ucdavis1)
+davisdata = ucdavis1
+
 ```
 
+# Introduction
+ The research question is this: Is there a difference in the average amount of alcohol consumed per week by students whi sit in row 1, row 2, or row 3 of the UCdavis classroom
+
+$H_0$: There is no difference between the average number of drinks imbibed between people based on the row they sit in.
+
+$H_A$: The average number drinks is different between at least two rows. 
+ 
+ 
+# Methods
+
+Data from UC Davis: Seat is cateorical, and alcohol is numerical, so we use the Numerical~Cat helper file
+
+# Description
+## graphical description
+
+```{r}
+boxplot(alcohol~Seat,data=davisdata)
+```
+
+This boxplot shows that students who sit in the back row tend to drink more
+
+# Graphical Results
+
+# 
+  
+  
 ```{r include=FALSE}
 require(tidyverse)
 require(tigerstats)
