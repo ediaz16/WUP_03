@@ -47,9 +47,17 @@ Numerical graph shows the median for back seat consumption is 3.5, front seat co
 
 ##inferential description
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+The P value is 0.000116 < 0.05 therefore we reject the $H_0$. That mean that all the students in the same ow do not consume the same amount on alcohol.
+
+
 #Conclution and Discussion
 
-
+In order to answer if 
 
 # 
   
