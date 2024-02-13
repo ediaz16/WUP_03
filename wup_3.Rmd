@@ -32,11 +32,12 @@ Data from UC Davis: Seat is cateorical, and alcohol is numerical, so we use the 
 ```{r}
 boxplot(alcohol~Seat,data=davisdata)
 ```
+
 # Graphical Results
 
 This boxplot shows that students who sit in the back row tend to drink more
 
-##numerical description 
+## numerical description 
 
 ```{r}
 favstats(alcohol~Seat,data=ucdavis1)
@@ -51,7 +52,7 @@ model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
 
-The P value is 0.000116 < 0.05 therefore we reject the $H_0$. That mean that all the students in the same ow do not consume the same amount on alcohol.
+The P value is 0.000116 < 0.05 therefore we reject the $H_0$. That mean that all the students in the same do not consume the same amount on alcohol.
 
 ```{r}
 plot(TukeyHSD(model1))
@@ -59,7 +60,7 @@ plot(TukeyHSD(model1))
 
 This graph shows the difference in alcohol the is no difference in the the middle to the front seat consumption and those in the back drink more than the middle and front row. 
 
-#Conclution and Discussion
+# Conclution and Discussion
 
 From box plot it appears that students who sit in the back row tend to drink more. From the inferential graph shows hat mean that all the students in the same ow do not consume the same amount on alcohol.From the tukey graph shows there is no difference in the the middle to the front seat consumption and those in the back drink more than the middle and front row. 
 # 
@@ -70,31 +71,3 @@ require(tidyverse)
 require(tigerstats)
 davisdata <- read.csv(file="UCDavis.csv")
 ```
-## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
-## you choose to sit in??
-
-## Now with ggplot - first select the basic data
-
-```{r}
-basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
-```
-## Now add in boxplot
-
-```{r}
-basicCN + geom_boxplot()
-```
-  
-  
-### get fancy  
-
-```{r}
-basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
-```
-
-## Numerical Summarys 
-
-## Inferential Tests
-
-## Conclusions
-
-
