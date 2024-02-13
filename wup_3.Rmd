@@ -33,6 +33,7 @@ Data from UC Davis: Seat is cateorical, and alcohol is numerical, so we use the 
 boxplot(alcohol~Seat,data=davisdata)
 ```
 
+
 This boxplot shows that students who sit in the back row tend to drink more
 
 # Graphical Results
