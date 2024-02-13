@@ -29,11 +29,10 @@ Data from UC Davis: Seat is cateorical, and alcohol is numerical, so we use the 
 # Description
 ## graphical description
 
-# Graphical Results
-
 ```{r}
 boxplot(alcohol~Seat,data=davisdata)
 ```
+# Graphical Results
 
 This boxplot shows that students who sit in the back row tend to drink more
 
@@ -54,11 +53,15 @@ summary.aov(model1)
 
 The P value is 0.000116 < 0.05 therefore we reject the $H_0$. That mean that all the students in the same ow do not consume the same amount on alcohol.
 
+```{r}
+plot(TukeyHSD(model1))
+```
+
+This graph shows the difference in alcohol the is no difference in the the middle to the front seat consumption and those in the back drink more than the middle and front row. 
 
 #Conclution and Discussion
 
-In order to answer if 
-
+From box plot it appears that students who sit in the back row tend to drink more. From the inferential graph shows hat mean that all the students in the same ow do not consume the same amount on alcohol.From the tukey graph shows there is no difference in the the middle to the front seat consumption and those in the back drink more than the middle and front row. 
 # 
   
   
